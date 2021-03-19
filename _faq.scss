@@ -1,0 +1,72 @@
+.card {
+    outline: none;
+    border: none;
+}
+
+.card-header {
+    outline: none;
+    text-align: center;
+}
+
+.card-body {
+    font-family: $roboto;
+}
+
+.titleBtn {
+    color: rgb(148, 92, 148);
+    font-size: 1.3rem;
+
+    &:hover {
+        color: rgb(148, 92, 148);
+        transform: scale(1.1, 1.1);
+
+    }
+}
+
+.boxFaq {
+    text-align: center;
+
+    h4 {
+        color: rgb(37, 116, 13);
+        font-family: $roboto;
+        font-weight: bold;
+    }
+
+    p {
+        font-family: $roboto;
+    }
+}
+
+.question {
+    display: flex;
+    margin: 0 auto;
+    opacity: 0.8;
+
+    &:hover {
+        animation: bounce;
+        animation-duration: 5s;
+    }
+}
+
+.btnContact {
+    width: 150px;
+    height: 50px;
+    border: none;
+    background-color: rgb(225, 103, 103);
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 0 rgb(242, 185, 63);
+    transition: ease-out 0.8s;
+    font-size: 1.1rem;
+    outline: none;
+
+    &:hover {
+        box-shadow: inset 300px 0 0 0 rgb(242, 185, 63);
+    }
+}
+
+.btnContact a {
+    text-decoration: none;
+    color: #fff;
+    font-family: $roboto;
+    font-weight: bold;
+}

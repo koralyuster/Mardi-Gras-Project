@@ -1,0 +1,244 @@
+.containerCir {
+    display: flex;
+
+    @include for-size(tablet-landscape-up) {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    @include for-size(ipad-pro) {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    @include for-size(phone-only) {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+
+.cir {
+    width: 320px;
+    height: 320px;
+    background-color: rgb(185, 160, 189);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    position: relative;
+    margin: 0 auto;
+    transition: ease-out 0.8s;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: inset 400px 0 0 0 rgb(247, 211, 135);
+        transform: scale(1.1, 1.1);
+    }
+}
+
+.cirOne h2 {
+    position: absolute;
+    top: 30%;
+    left: 18%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: $pattaya;
+}
+
+.cirTwo h2 {
+    position: absolute;
+    top: 30%;
+    left: 18%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: $pattaya;
+}
+
+.cirThree h2 {
+    position: absolute;
+    top: 30%;
+    left: 22%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: $pattaya;
+}
+
+.cirOne p {
+    position: absolute;
+    top: 40%;
+    font-family: $roboto;
+    font-size: 1rem;
+    text-align: center;
+    padding: 17px
+}
+
+.cirTwo p {
+    position: absolute;
+    top: 40%;
+    font-family: $roboto;
+    font-size: 1rem;
+    text-align: center;
+    padding: 15px
+}
+
+.cirThree p {
+    position: absolute;
+    top: 40%;
+    font-family: $roboto;
+    font-size: 1rem;
+    text-align: center;
+    padding: 15px
+}
+
+.LaToya {
+    position: relative;
+    background: #d3d3d3;
+    overflow: hidden;
+    height: 45vh;
+
+    @include for-size(ipad-pro) {
+        height: 50vh;
+    }
+
+    @include for-size(desktop-up) {
+        height: 50vh;
+    }
+
+    @include for-size(tablet-landscape-up) {
+        height: 75vh;
+    }
+
+    @include for-size(phone-only) {
+        height: 100%;
+    }
+
+
+    p {
+        padding: 50px;
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+
+        @include for-size(phone-only) {
+            padding: 30px;
+            width: 350px;
+            text-align: center;
+        }
+    }
+
+    &:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1;
+        opacity: 0.4;
+        background-image: url(images/LaToyaCantrell.jpg);
+        background-repeat: no-repeat;
+        background-position: 50% 0%;
+        background-size: cover;
+
+    }
+
+    h3 {
+        text-align: center;
+        padding-top: 50px;
+        font-family: $pattaya;
+        font-size: 2rem;
+        color: #000;
+    }
+
+    p {
+        font-family: $roboto;
+        color: #000;
+        font-size: 1.1rem;
+    }
+}
+
+.countdown {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+
+
+    h2 {
+        text-align: center;
+        font-size: 8rem;
+        line-height: 0.7em;
+        color: #333;
+        margin-top: -80px;
+        color: rgb(134, 107, 138);
+    }
+
+    span {
+        display: block;
+        letter-spacing: 6px;
+        font-size: 0.2em;
+    }
+}
+
+.time {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+
+
+    div {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        background-color: rgb(185, 160, 189);
+        border-radius: 10%;
+        color: #fff;
+        font-family: $roboto;
+        margin: 0 10px;
+        font-size: 3em;
+
+        @include for-size(phone-only) {
+            font-size: 2rem;
+        }
+
+        &::before {
+            content: ' ';
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            width: 100%;
+            height: 35px;
+            background: rgb(223, 223, 223);
+            border-radius: 0 0 10% 10%;
+            color: rgb(99, 99, 99);
+            font-size: 1.2rem;
+            font-family: $roboto;
+            line-height: 35px;
+
+
+            @include for-size(phone-only) {
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    #day:before {
+        content: 'Days';
+    }
+
+    #hour:before {
+        content: 'Hours';
+    }
+
+    #minute:before {
+        content: 'Minutes';
+    }
+
+    #second:before {
+        content: 'Seconds';
+    }
+}
